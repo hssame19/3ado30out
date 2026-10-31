@@ -9,16 +9,18 @@ public class Main {
         cadastro.Cadastrar(registro, banco);
         cadastro.Cadastrar(registro2, banco);
 
-        if(cadastro.consultaId(0, banco)) {
+        System.out.println("///");
+
+        if(cadastro.consultaId(5, banco)) {
             System.out.println("Busca por id: elemento está na lista");
         } else {
-            System.out.println("Busca por id: elemento ão está na lista");
+            System.out.println("Busca por id: elemento não está na lista");
         }
-//
-//        if(cadastro.consultaNome("NomeAleatorio", banco)) {
-//            System.out.println("Busca por nome: elemento está na lista");
-//        } else {
-//            System.out.println("Busca por nome: elemento não está na lista");
-//        }
+
+        if(cadastro.consultaNome("NomeAleatorio", banco)) {
+            System.out.println("Busca por nome: elemento está na lista");
+        } else {
+            System.out.println("Busca por nome: elemento não está na lista");
+        }
     }
 }

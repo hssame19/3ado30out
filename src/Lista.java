@@ -20,9 +20,9 @@ public class Lista {
             return "A lista está vazia.";
         }
 
-        String txt = "";
+        StringBuilder txt = new StringBuilder();
         for(int i = 0; i < this.cont; i++) {
-            txt += this.vetor[i] + " + ";
+            txt.append(this.vetor[i].getNome()).append(" + ");
         }
         return "Lista: " + txt;
     }
@@ -104,6 +104,13 @@ public class Lista {
 
     // Busca por id
     public boolean contem(int id) {
+        for(int i = 0; i < this.cont; i++) {
+            if(this.vetor[i].getId() == id) {
+                return true;
+            }
+            return false;
+        }
+
         for(Registro registro : this.vetor) {
             if(registro.getId() == id) {
                 return true;
@@ -114,8 +121,8 @@ public class Lista {
 
     // Busca por nome
     public boolean contem(String nome) {
-        for(Registro var : this.vetor) {
-            if(nome.equals(var.getNome())) {
+        for(int i = 0; i < this.cont; i++) {
+            if(this.vetor[i].getNome().equals(nome)) {
                 return true;
             }
         }
