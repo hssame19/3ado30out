@@ -26,7 +26,6 @@ public class Main {
                 break;
             }
 
-            scanner.nextLine();
             System.out.println();
             switch(opcao) {
                 case 1:
