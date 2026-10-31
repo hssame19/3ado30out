@@ -36,10 +36,10 @@ public class Lista {
         this.cont++;
 
         ///
-        System.out.println("INSERIDO");
-        int registroId = registro.getId();
-        String registroNome = registro.getNome();
-        System.out.println(registroId + registroNome);
+//        System.out.println("INSERIDO");
+//        int registroId = registro.getId();
+//        String registroNome = registro.getNome();
+//        System.out.println(registroId + registroNome);
         ///
 
 
@@ -106,13 +106,6 @@ public class Lista {
     public boolean contem(int id) {
         for(int i = 0; i < this.cont; i++) {
             if(this.vetor[i].getId() == id) {
-                return true;
-            }
-            return false;
-        }
-
-        for(Registro registro : this.vetor) {
-            if(registro.getId() == id) {
                 return true;
             }
         }
