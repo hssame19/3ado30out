@@ -42,9 +42,9 @@ public class Main {
                     System.out.println("[BuscaId] Digite o id que vc quer pesquisar: ");
                     int idBuscado = scanner.nextInt();
                     if(cadastro.consultaId(idBuscado, banco)) {
-                        System.out.println("[BuscaId] Elemento está na lista");
+                        System.out.println("[BuscaId] Elemento está na lista: " + idBuscado);
                     } else {
-                        System.out.println("[BuscaId] elemento não está na lista");
+                        System.out.println("[BuscaId] elemento não está na lista: " + idBuscado);
                     }
                     break;
                 case 3:
@@ -52,9 +52,9 @@ public class Main {
                     System.out.println("[BuscaNome] Digite o nome a ser buscado: ");
                     String nomeBuscado = scanner.nextLine();
                     if(cadastro.consultaNome(nomeBuscado, banco)) {
-                        System.out.println("[BuscaNome] Elemento está na lista");
+                        System.out.println("[BuscaNome] Elemento está na lista: " + nomeBuscado);
                     } else {
-                        System.out.println("[BuscaNome] Elemento não está na lista");
+                        System.out.println("[BuscaNome] Elemento não está na lista: " + nomeBuscado);
                     }
                     continue;
                 case 4:
